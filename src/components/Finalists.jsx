@@ -5,7 +5,7 @@ const Finalists = ({ finalists, onAdd }) => {
     return (
         <div className="all-finalists">
             {finalists.map((fin) => (
-                <OneFinalist finalist={fin} key={fin.id} onAdd={onAdd} />
+                <OneFinalist finalist={fin} key={fin.id} onAdd={onAdd} voted={1} />
             ))}
         </div>
     );
