@@ -32,6 +32,7 @@ function App() {
   return (
     <div className="App">
       <NavBar votesNum={votesNum}></NavBar>
+      <h1>Glasajte za svoje favorite!</h1>
       <Finalists finalists={finalists} onAdd={addFinalist} />
     </div>
   );

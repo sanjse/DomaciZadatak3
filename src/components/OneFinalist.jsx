@@ -12,8 +12,8 @@ function OneFinalist({ finalist, onAdd }) {
                 alt="Naslovna slika"
             />
             <div className="card-body">
-                <h3 className="card-title">{finalist.name}</h3>
-                <p className="card-text">{finalist.song}</p>
+                <h2 className="card-title">{finalist.name}</h2>
+                <h4 className="card-text"><i>{finalist.song}</i></h4>
             </div>
             <button className="btn" onClick={() => onAdd(finalist.name)}>
                 <BsSuitHeartFill />
