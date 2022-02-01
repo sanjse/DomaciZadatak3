@@ -2,7 +2,7 @@ import React from "react";
 import { BsSuitHeartFill } from "react-icons/bs";
 
 
-function OneFinalist() {
+function OneFinalist({ finalist, onAdd }) {
     const stil = { margin: 1 + "em", borderStyle: "solid" };
     return (
         <div className="card" style={stil}>
@@ -12,10 +12,10 @@ function OneFinalist() {
                 alt="Naslovna slika"
             />
             <div className="card-body">
-                <h3 className="card-title">Finalist name</h3>
-                <p className="card-text">Song title</p>
+                <h3 className="card-title">{finalist.name}</h3>
+                <p className="card-text">{finalist.song}</p>
             </div>
-            <button className="btn">
+            <button className="btn" onClick={() => onAdd(finalist.name)}>
                 <BsSuitHeartFill />
             </button>
 

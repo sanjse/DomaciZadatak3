@@ -1,12 +1,12 @@
 import React from "react";
 import OneFinalist from "./OneFinalist.jsx";
 
-const Finalists = () => {
+const Finalists = ({ finalists, onAdd }) => {
     return (
         <div className="all-finalists">
-            <OneFinalist />
-            <OneFinalist />
-            <OneFinalist />
+            {finalists.map((fin) => (
+                <OneFinalist finalist={fin} key={fin.id} onAdd={onAdd} />
+            ))}
         </div>
     );
 };
